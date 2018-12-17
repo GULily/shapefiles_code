@@ -1,20 +1,8 @@
-# AcreValue Coding Challenge
-
-The primary aim of AcreValue data science is to value all the agricultural land in the US. We do that by
-pulling together various data sources and building a valuation model. Your task for this challenge is to build
-and validate a miniature version of our valuation model.
-
 ## Objectives
 
 1) Extract and format information from raw data sources.
 2) Engineer features from spatial information.
 3) Fit and evaluate a valuation model that predicts the price-per-area of a parcel of land.
-
-## How to Submit Your Answer
-
-Email us your code as well as a summary of your findings within 24 hours of receiving this challenge.
-(If you're stuck, feel free to email `adriantorchiana@granular.ag` and ask for a small hint or a clarification.)
-Ideally your code submission would be a Jupyter notebook or an R or Python script, and your summary can be plain text.
 
 ## Data Sources
 
@@ -101,16 +89,3 @@ Detail with parcels on top of CDL (parcels are in black and partially transparen
 
 Remember, the values in the CDL raster (tif file) are integer land cover codes.
 For example, code 75 represents almonds.
-
-### Recommended Tools
-
-If you are doing this challenge in Python, the following libraries may be useful to you:
-
-* [Fiona](https://github.com/Toblerity/Fiona) for loading shapefiles.
-
-* [Shapely](https://github.com/Toblerity/Shapely) for manipulating vectors and shapes.
-  For example, you can use Shapely's `object.convex_hull` to easily get a parcel's convex hull.
-
-* [Rasterio](https://github.com/mapbox/rasterio) for working with raster datasets. For example, you can use
-  `rasterio.mask.mask` to find the CDL pixels that cover a parcel shape, which will be useful for figuring out
-  what crops were grown on the parcel.
